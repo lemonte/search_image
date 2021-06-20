@@ -26,7 +26,7 @@ window.env = {
   "__CF_USER_TEXT_ENCODING": "0x0:0:0",
   "npm_package_browserslist_development_2": "last 1 safari version",
   "npm_execpath": "/usr/local/lib/node_modules/yarn/bin/yarn.js",
-  "PATH": "/tmp/yarn--1624221081559-0.09154452485077091:/Users/geandersonlemonte/Arquivos pessoais/search_image/node_modules/.bin:/usr/local/share/.config/yarn/link/node_modules/.bin:/usr/local/libexec/lib/node_modules/npm/bin/node-gyp-bin:/usr/local/lib/node_modules/npm/bin/node-gyp-bin:/usr/local/bin/node_modules/npm/bin/node-gyp-bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:$PATH:Users/geandersonlemonte/flutter/bin:Users/geandersonlemonte/flutter/bin:/Users/geandersonlemonte/flutter/bin",
+  "PATH": "/tmp/yarn--1624221425320-0.7820849205435454:/Users/geandersonlemonte/Arquivos pessoais/search_image/node_modules/.bin:/usr/local/share/.config/yarn/link/node_modules/.bin:/usr/local/libexec/lib/node_modules/npm/bin/node-gyp-bin:/usr/local/lib/node_modules/npm/bin/node-gyp-bin:/usr/local/bin/node_modules/npm/bin/node-gyp-bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:$PATH:Users/geandersonlemonte/flutter/bin:Users/geandersonlemonte/flutter/bin:/Users/geandersonlemonte/flutter/bin",
   "MAIL": "/var/mail/root",
   "npm_config_argv": "{\"remain\":[],\"cooked\":[\"run\",\"build\"],\"original\":[\"build\"]}",
   "_": "/Users/geandersonlemonte/Arquivos pessoais/search_image/node_modules/.bin/react-dotenv",
@@ -73,5 +73,5 @@ window.env = {
   "npm_package_scripts_eject": "react-scripts eject",
   "npm_node_execpath": "/usr/local/bin/node",
   "npm_config_version_tag_prefix": "v",
-  "REACT_APP_API_KEY": "2d01efc8632b371eac59e2a697b03dda"
+  "REACT_APP_API_KEY": "dskjdkljsldkjdskl"
 };
