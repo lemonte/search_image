@@ -24,6 +24,7 @@ export function ListOfCardsProvider({ children }) {
             return setListCards(response.data)
         }
         if (response.type == "erro") {
+            setErro([])
             return setErro(response.data)
         }
     }

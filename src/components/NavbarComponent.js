@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import { useState } from "react"
-import { Form, Navbar, Button, FormControl, Row, Col } from "react-bootstrap"
+import { Navbar, Button, FormControl, Row, Col } from "react-bootstrap"
 import { AplicationContext } from "../controllers/ListOfCardsController"
 
 function NavbarComponent() {
@@ -12,7 +12,7 @@ function NavbarComponent() {
             <Navbar data-testid="navBar" bg="light" expand="xg" style={{ display: "block" }}>
                 <Row >
                 <Col className="col-md-3 col-sm-12 col-12 text-center" >
-                <Navbar.Brand id="titlePage" href="#home">Buscador de Imagem</Navbar.Brand>
+                <Navbar.Brand id="titlePage" href="/">Buscador de Imagem</Navbar.Brand>
                 </Col>
                     <Col className="col-md-7 col-sm-10 col-9" >
                         <FormControl data-testid="formSearch" type="text" placeholder="Search" className="mr-sm-2"

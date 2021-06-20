@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import AlertComponent from '../components/AlertComponent';
 import CardComponent from '../components/CardComponent';
@@ -8,10 +8,11 @@ import { AplicationContext } from '../controllers/ListOfCardsController';
 function SearchPage() {
     const context = useContext(AplicationContext)
     const { listCards, erro } = context;
-    return (
+
+    return (  
         <>
             <NavbarComponent />
-            {erro.map(err => <AlertComponent item={err} />)}
+            {erro.map((err, index )=> <AlertComponent key={index} item={err} />)}
             <Row >
                 <Col xs={1} md={1} > </Col>
                 <Col xs={10} md={10} data-testid="listaCards" >
