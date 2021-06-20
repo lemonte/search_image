@@ -1,15 +1,15 @@
 import { createContext, useState } from "react"
-import axios from "axios"
-
-const { REACT_APP_API_KEY } = process.env
+import { requestData } from "../connections";
+import Tools from "../tools/tools";
 
 
 export const defaultValuesContext = {
     listCards: [],
     getData: (text) => { },
-    erro: [], 
-    removeError: (err) => {}
-}; 
+    erro: [],
+    removeError: (err) => { },
+    setListOfCards: (list) => { }
+};
 
 
 export const AplicationContext = createContext(defaultValuesContext)
@@ -19,32 +19,23 @@ export function ListOfCardsProvider({ children }) {
     const [erro, setErro] = useState([])
 
     async function getData(text) {
-        var count = 0
-        let listErros = erro;
-        count ++;
-        if(!REACT_APP_API_KEY){
-            listErros.push({ 'id': count, "erro": "chave de conexão não encontrada "})
-            return setErro(listErros)
+        const response = await requestData(text, erro)
+        if (response.type == "accept") {
+            return setListCards(response.data)
         }
-        try {
-            const response = await axios.get(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${REACT_APP_API_KEY}&format=json&nojsoncallback=1&safe_search=1&text=${text}`);
-            if (response.status === 200) {
-                return setListCards(response.data?.photos?.photo ?? [])
-            }
-            listErros.push({ "erro": "Erro de conexão"})
-            return setErro(listErros)
-        } catch (error) {
-            listErros.push({ "erro": "Erro de conexão"})
-            return setErro(listErros)
+        if (response.type == "erro") {
+            return setErro(response.data)
         }
     }
 
-    function removeError(err){
-        let listErros = erro
-        listErros.splice(listErros.findIndex(item => item.id === err.id), 1);
-        return setErro(listErros)
+    function removeError(err) {
+        return setErro(Tools.removeElementOfArray(erro, err))
+
     }
 
+    function setListOfCards(list) {
+        return setListCards(list)
+    }
 
     return (
         <AplicationContext.Provider
@@ -53,7 +44,8 @@ export function ListOfCardsProvider({ children }) {
                     listCards,
                     getData,
                     erro,
-                    removeError
+                    removeError,
+                    setListOfCards
                 }
             }
         >

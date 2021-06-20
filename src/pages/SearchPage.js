@@ -14,7 +14,7 @@ function SearchPage() {
             {erro.map(err => <AlertComponent item={err} />)}
             <Row >
                 <Col xs={1} md={1} > </Col>
-                <Col xs={10} md={10} >
+                <Col xs={10} md={10} data-testid="listaCards" >
                     <Row xs={1} md={4}>
                         {listCards.map(card => {
                             return CardComponent(card)

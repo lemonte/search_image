@@ -13,15 +13,10 @@ function AlertComponent(props) {
                 return setShow(false)
                }} show={show} delay={5000} autohide>
                 <Toast.Header>
-                    <img
-                        src="holder.js/20x20?text=%20"
-                        className="rounded me-2"
-                        alt=""
-                    />
                     <strong className="me-auto">Buscador de imagens</strong>
                     <small>Agora</small>
                 </Toast.Header>
-                <Toast.Body>{props.item.erro} !</Toast.Body>
+                <Toast.Body data-testid="textAlert" >{props.item.erro} !</Toast.Body>
             </Toast>
 
     )

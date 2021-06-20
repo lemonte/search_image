@@ -1,5 +1,4 @@
 import { fireEvent, render} from "@testing-library/react";
-import App from "../App";
 import NavbarComponent from "../components/NavbarComponent";
 
 describe("Testando componente de navegação", () => {
@@ -14,7 +13,7 @@ describe("Testando componente de navegação", () => {
         expect(search.value).toEqual("test")
     })
     it("Testando botão de pesquisa funciona corretamente", () => {
-        const { getByTestId } = render(<App/>)
+        const { getByTestId } = render(<NavbarComponent/>)
         const search = getByTestId("buttonSearch")
         fireEvent.submit(search)
     })

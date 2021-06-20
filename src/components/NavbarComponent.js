@@ -9,7 +9,7 @@ function NavbarComponent() {
     const { getData } = context;
     return (
         <>
-            <Navbar bg="light" expand="xg" style={{display: "block"}}>
+            <Navbar data-testid="navBar" bg="light" expand="xg" style={{display: "block"}}>
                 <Navbar.Brand id="titlePage" href="#home">Buscador de Imagem</Navbar.Brand>
                 <Form className="d-flex" action="#" onSubmit={() => { return getData(textSearch)}} >
                     <FormControl data-testid="formSearch" type="text" placeholder="Search" className="mr-sm-2"
