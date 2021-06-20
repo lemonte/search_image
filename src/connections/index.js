@@ -15,9 +15,9 @@ export async function requestData(text, erro) {
         if (response.status === 200) {
             return controleReturnRequest("accept", response.data?.photos?.photo ?? [])
         }
-        return controleReturnRequest("erro", listErros.push({"erro": "erro de conexão"}))
+        return controleReturnRequest("erro", listErros.push({ "id": count, "erro": "erro de conexão"}))
     } catch (error) {
-        return controleReturnRequest("erro", listErros.push({"erro": "erro de conexão"}))
+        return controleReturnRequest("erro", listErros.push({"id": count, "erro": "erro de conexão"}))
     }
 }
 
