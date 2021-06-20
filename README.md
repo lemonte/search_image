@@ -10,6 +10,9 @@ Baixe o projeto em sua máquina, extraia o arquivo .zip do projeto, em seguida n
  
   OBS: Substitua <SUA API KEY> por sua chave gerada anteriormente no site flickr.
 
+  
+## Comandos para executar o projeto
+  
 ### `yarn start`
 
 Sera executado o projeto em modo de desenvolvimento.\
