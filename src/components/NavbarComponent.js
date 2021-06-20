@@ -25,7 +25,7 @@ function NavbarComponent() {
                         />
                     </Col>
                     <Col className="col-md-2 col-sm-2 col-3" >
-                    <Button variant="primary" onClick={() => getData(textSearch)} >Buscar</Button>
+                    <Button variant="primary" data-testid="buttonSearch" onClick={() => getData(textSearch)} >Buscar</Button>
                     </Col>
 
                 </Row>
